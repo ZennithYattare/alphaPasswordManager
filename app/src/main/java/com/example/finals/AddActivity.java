@@ -51,9 +51,9 @@ public class AddActivity extends AppCompatActivity {
                 if (titlecheck.trim() != "") {
                     Boolean insert = dbHelper.insertData(title_input.getText().toString(), username_input.getText().toString().trim(), password_input.getText().toString().trim(), notes_input.getText().toString());
                     if (insert == true) {
+                        finish();
                         Intent intent = new Intent(AddActivity.this, ListPage.class);
                         startActivity(intent);
-                        finish();
                     }
                 }else{
                     AlertDialog.Builder alertDialog = new AlertDialog.Builder(AddActivity.this);
