@@ -129,8 +129,8 @@ public class DisplayActivity extends AppCompatActivity {
         alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                dbHelper.deleteTuple(string_id);
                 finish();
+                dbHelper.deleteTuple(string_id);
             }
         });
         alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
