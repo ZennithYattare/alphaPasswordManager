@@ -58,6 +58,7 @@ public class UpdateActivity extends AppCompatActivity {
         updateSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 title = updateTitle.getText().toString().trim();
                 username = updateUsername.getText().toString().trim();
                 password = updatePassword.getText().toString().trim();
@@ -65,7 +66,6 @@ public class UpdateActivity extends AppCompatActivity {
                 dbHelper.updateData(id, title, username, password, notes);
                 Intent intent = new Intent(UpdateActivity.this, ListPage.class);
                 startActivity(intent);
-                finish();
             }
         });
     }

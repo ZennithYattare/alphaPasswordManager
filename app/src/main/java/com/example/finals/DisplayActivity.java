@@ -91,6 +91,7 @@ public class DisplayActivity extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent intent = new Intent(DisplayActivity.this, UpdateActivity.class);
                 intent.putExtra("updateTitle", string_title);
                 intent.putExtra("updateUsername", string_username);
@@ -98,7 +99,6 @@ public class DisplayActivity extends AppCompatActivity {
                 intent.putExtra("updateNotes", string_notes);
                 intent.putExtra("updateID", string_id);
                 startActivity(intent);
-                //finish();
             }
         });
         getAndSetIntentData();
